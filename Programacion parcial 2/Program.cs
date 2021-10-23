@@ -17,7 +17,7 @@ namespace programacionparcial2
             }
             else
             {
-            Console.WriteLine("El producto no se encuentra en la tienda!");
+            Console.WriteLine("El producto no se encuentra en la tienda, busca otro producto!");
             }
         }
 
