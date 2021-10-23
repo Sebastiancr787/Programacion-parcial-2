@@ -98,7 +98,7 @@ namespace programacionparcial2
                                     program.buscarProducto(dictProductos);
 
                                     break;
-
+                        
                                 case 2:
                                     Console.WriteLine("Suma rápida de productos");
 
@@ -180,8 +180,8 @@ namespace programacionparcial2
                                     Console.WriteLine("\nIngrese el ID para actualizar: ");
                                     string id2Actualizar = "";
                                     id2Actualizar = Console.ReadLine();
-                                    if(dictClientes.ContainsKey(id2Actualizar)){
-
+                                    if(dictClientes.ContainsKey(id2Actualizar)){ 
+                            
                                     
                                         Console.WriteLine("\nIngrese el nuevo valor de la cuenta:  ");
                                         float nuevoValorCuenta = 0;
