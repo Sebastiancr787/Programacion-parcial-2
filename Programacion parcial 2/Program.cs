@@ -28,6 +28,25 @@ namespace programacionparcial2
 
             Program program = new Program();
             int opcionMenu = 0;
+            float totalSumaProd = 0;
+            float pagoDelCliente = 0;
+
+
+            var dictClientes = new Dictionary<string, float>() {
+                {"1000873268", 500},
+                {"1234567890", -2500},
+                {"0987654321", 0},
+                {"4620474027", 20000},
+                {"7403801830", 5000},
+                {"9573028404", -10000},
+                {"6473936497", 0 },
+                {"1840572038", -4500},
+                {"0948208293", 0},
+                {"0002783934", 0},
+                {"6462828345", -7800},
+                {"1836549163", 0},
+
+            };
             var dictProductos = new Dictionary<String, float>() {
                 {"gaseosa", 2000},
                 {"papas", 3000},
@@ -56,7 +75,7 @@ namespace programacionparcial2
                 Console.WriteLine(
                                 "\n1.- Buscar producto " +
                                 "\n2.- Suma de productos " +
-                                "\n3.- pagar cuenta " +
+                                "\n3.- Pagar cuenta " +
                                 "\n4.- Consultar cuenta cliente" +
                                 "\n5.- Actualizar cuenta cliente " +
                                 "\n6.- Calcular informe de ventas " +
@@ -84,7 +103,7 @@ namespace programacionparcial2
                                     Console.WriteLine("Suma rápida de productos");
 
                                     string productoCompraRapida = "";
-                                    float totalSumaProd = 0;
+                                    
                                     while(productoCompraRapida != "0"){
                                         Console.WriteLine("Ingrese el nombre de los productos que desea comprar, cuando desee detenerse ingrese 0: ");
                                         Console.WriteLine("Si desea buscar el precio de un producto, escriba -1");
@@ -108,11 +127,52 @@ namespace programacionparcial2
                                     }
                                     break;
                                 case 3:
-                                    Console.WriteLine("pagar cuenta");
+                                    Console.WriteLine("Pagar cuenta");
+                                    Console.WriteLine("\n¿El cliente va a fiar? Ingrese 1 si va a fiar, cualquier cosa de lo contrario: ");
+                                    string vaAFiar = "0";
+                                    vaAFiar = Console.ReadLine();
+                                    if (vaAFiar == "1"){
+                                        Console.WriteLine("El total fiado es:  " + totalSumaProd);
+                                    }
+                                    else
+                                    {   
+                                        do{
+                                        Console.WriteLine("\nIngrese cuanto dinero le entregó el cliente: ");
+                                        
+                                        pagoDelCliente = float.Parse(Console.ReadLine());
+                                        if (pagoDelCliente < totalSumaProd){
+                                            Console.WriteLine("Ese dinero no es suficiente para pagar la suma de productos, intente otra vez: ");
+                                        }
+                                        } while(pagoDelCliente < totalSumaProd);
+                                        
+                                        float devueltaCliente = 0;
+                                        devueltaCliente = pagoDelCliente - totalSumaProd; 
+                                        Console.WriteLine("Su devuelta es de :$" + devueltaCliente + " pesos!");
+                                        
+                                    }
+                                    
                                     break;
 
                                 case 4:
                                     Console.WriteLine("Consultar cuenta cliente");
+
+                                    Console.WriteLine("\nIngrese el ID del cliente: ");
+                                    string inputIdCliente = "0000000000";
+                                    inputIdCliente = Console.ReadLine();
+                                    if(!dictClientes.ContainsKey(inputIdCliente)){
+                                        Console.WriteLine("Ese ID no se encuentra en la base de datos!");
+                                    }
+                                    else{
+                                        if (dictClientes[inputIdCliente] > 0){
+                                            Console.WriteLine("Tiene a favor un saldo de :$" + dictClientes[inputIdCliente] + " pesos");
+                                        }
+                                        if (dictClientes[inputIdCliente] == 0){
+                                            Console.WriteLine("Esta a paz y salvo");
+                                        }
+                                        if (dictClientes[inputIdCliente] < 0){
+                                            Console.WriteLine("Esta con una deuda de :$" + dictClientes[inputIdCliente] + " pesos");
+                                        }
+                                    }
                                     break;
 
                                 case 5:
