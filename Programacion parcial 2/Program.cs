@@ -177,8 +177,25 @@ namespace programacionparcial2
 
                                 case 5:
                                     Console.WriteLine("Actualizar cuenta cliente");
-                                    break;
+                                    Console.WriteLine("\nIngrese el ID para actualizar: ");
+                                    string id2Actualizar = "";
+                                    id2Actualizar = Console.ReadLine();
+                                    if(dictClientes.ContainsKey(id2Actualizar)){
 
+                                    
+                                        Console.WriteLine("\nIngrese el nuevo valor de la cuenta:  ");
+                                        float nuevoValorCuenta = 0;
+                                        nuevoValorCuenta = float.Parse(Console.ReadLine());
+                                        dictClientes[id2Actualizar] = nuevoValorCuenta;
+
+                                        Console.WriteLine("La cuenta del cliente con id " + id2Actualizar + " ha sido actualizada correctamente!");
+                                    
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Ese usuario no existe!");    
+                                    }
+                                    break;
                                 case 6:
                                     Console.WriteLine("Calcular informe de ventas");
                                     break;
