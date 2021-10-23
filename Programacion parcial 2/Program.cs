@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace programacionparcial2
 {
@@ -30,6 +31,11 @@ namespace programacionparcial2
             int opcionMenu = 0;
             float totalSumaProd = 0;
             float pagoDelCliente = 0;
+            float totalInformeVentas = 0;
+            float totalAdeudadoClientes = 0;
+            ArrayList arlistInformeVentas = new ArrayList();
+
+
 
 
             var dictClientes = new Dictionary<string, float>() {
@@ -101,7 +107,7 @@ namespace programacionparcial2
                         
                                 case 2:
                                     Console.WriteLine("Suma rápida de productos");
-
+                                    totalSumaProd = 0;
                                     string productoCompraRapida = "";
                                     
                                     while(productoCompraRapida != "0"){
@@ -119,7 +125,10 @@ namespace programacionparcial2
                                             }
                                             else
                                             {
-                                            Console.WriteLine("El producto no se encuentra en la tienda! No se sumo nada!");
+                                                if(productoCompraRapida != "0"){
+                                                    Console.WriteLine("El producto no se encuentra en la tienda! No se sumo nada!");
+                                                }
+                                                    
                                             }
                                         }
                                         
@@ -133,6 +142,7 @@ namespace programacionparcial2
                                     vaAFiar = Console.ReadLine();
                                     if (vaAFiar == "1"){
                                         Console.WriteLine("El total fiado es:  " + totalSumaProd);
+                                        arlistInformeVentas.Add(totalSumaProd);
                                     }
                                     else
                                     {   
@@ -148,6 +158,7 @@ namespace programacionparcial2
                                         float devueltaCliente = 0;
                                         devueltaCliente = pagoDelCliente - totalSumaProd; 
                                         Console.WriteLine("Su devuelta es de :$" + devueltaCliente + " pesos!");
+                                        arlistInformeVentas.Add(totalSumaProd);
                                         
                                     }
                                     
@@ -198,10 +209,26 @@ namespace programacionparcial2
                                     break;
                                 case 6:
                                     Console.WriteLine("Calcular informe de ventas");
+                                    totalInformeVentas = 0;
+                                    int contadorCompras = 1;
+                                    foreach (float i in arlistInformeVentas){
+                                        Console.WriteLine("-Compra #" + contadorCompras + ":  " + i + "$ -");
+                                        contadorCompras = contadorCompras + 1;
+                                        totalInformeVentas = totalInformeVentas + i;
+                                    }
+                                    Console.WriteLine("El total del informe de ventas es de: $" + totalInformeVentas + " pesos");
                                     break;
 
                                 case 7:
                                     Console.WriteLine("Calcular cartera de clientes");
+                                    totalAdeudadoClientes = 0;
+                                    foreach(var item  in dictClientes){
+                                        if (item.Value < 0){
+                                            totalAdeudadoClientes = totalAdeudadoClientes + item.Value;
+                                        }
+
+                                    }
+                                    Console.WriteLine("El total adeudado por todos los clientes de la tienda es de: $" + totalAdeudadoClientes);
                                     break;
 
                                 case 8:
