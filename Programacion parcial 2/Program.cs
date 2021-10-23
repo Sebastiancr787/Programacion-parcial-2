@@ -222,17 +222,20 @@ namespace programacionparcial2
                                 case 7:
                                     Console.WriteLine("Calcular cartera de clientes");
                                     totalAdeudadoClientes = 0;
-                                    foreach(var item  in dictClientes){
-                                        if (item.Value < 0){
-                                            totalAdeudadoClientes = totalAdeudadoClientes + item.Value;
-                                        }
+                                    foreach (var item in dictClientes)
+                                    {
+                                    if (item.Value < 0)
+                                    {
+                                    totalAdeudadoClientes = totalAdeudadoClientes + item.Value;
+                                    }
 
                                     }
                                     Console.WriteLine("El total adeudado por todos los clientes de la tienda es de: $" + totalAdeudadoClientes);
                                     break;
 
                                 case 8:
-                                    Console.WriteLine("Acerca de");
+                                    Console.WriteLine("Acerca de...");
+                                    
                                     break;
 
                                 case 9:
