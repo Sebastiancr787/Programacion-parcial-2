@@ -235,6 +235,7 @@ namespace programacionparcial2
 
                                 case 8:
                                     Console.WriteLine("Acerca de...");
+                                    Console.WriteLine("Este proyecto fue desarrollado por estudiantes de la Universidad Pontifica Bolivariana");
                                     
                                     break;
 
