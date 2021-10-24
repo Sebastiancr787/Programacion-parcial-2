@@ -196,12 +196,12 @@ namespace programacionparcial2
                                         nuevoValorCuenta = float.Parse(Console.ReadLine());
                                         dictClientes[id2Actualizar] = nuevoValorCuenta + dictClientes[id2Actualizar];
 
-                                        Console.WriteLine("La cuenta del cliente con id " + id2Actualizar + " ha sido actualizada correctamente!");
+                                        Console.WriteLine("La cuenta del cliente con la id " + id2Actualizar + " ha sido actualizada correctamente!");
                                     
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Ese usuario no existe!");    
+                                        Console.WriteLine("Este usuario no existe!");    
                                     }
                                     break;
                                 case 6:
