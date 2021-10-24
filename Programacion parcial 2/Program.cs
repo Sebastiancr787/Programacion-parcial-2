@@ -227,7 +227,7 @@ namespace programacionparcial2
                                     }
 
                                     }
-                                    Console.WriteLine("El total adeudado por todos los clientes de la tienda es de: $" + totalAdeudadoClientes);
+                                    Console.WriteLine("El total de deudas de todos los clientes de la tienda es de: $" + totalAdeudadoClientes);
                                     break;
 
                                 case 8:
