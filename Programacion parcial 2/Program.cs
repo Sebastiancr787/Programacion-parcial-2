@@ -165,11 +165,11 @@ namespace programacionparcial2
                                     string inputIdCliente = "0000000000";
                                     inputIdCliente = Console.ReadLine();
                                     if(!dictClientes.ContainsKey(inputIdCliente)){
-                                        Console.WriteLine("Ese ID no se encuentra en la base de datos!");
+                                        Console.WriteLine("Este ID no se encuentra en la base de datos!");
                                     }
                                     else{
                                         if (dictClientes[inputIdCliente] > 0){
-                                            Console.WriteLine("Tiene a favor un saldo de :$" + dictClientes[inputIdCliente] + " pesos");
+                                            Console.WriteLine("Tiene un saldo a favor de :$" + dictClientes[inputIdCliente] + " pesos");
                                         }
                                         if (dictClientes[inputIdCliente] == 0){
                                             Console.WriteLine("Esta a paz y salvo");
