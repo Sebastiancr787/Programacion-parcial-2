@@ -183,7 +183,7 @@ namespace programacionparcial2
                                 case 5:
                                     Console.WriteLine("Actualizar cuenta cliente");
 
-                                    Console.WriteLine("\nIngrese el ID para actualizar: ");
+                                    Console.WriteLine("\nIngrese su ID para actualizar: ");
                                     
                                     string id2Actualizar = "";
                                     id2Actualizar = Console.ReadLine();
