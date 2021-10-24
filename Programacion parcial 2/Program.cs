@@ -100,20 +100,26 @@ namespace programacionparcial2
                                     
                                     while(productoCompraRapida != "0"){
                                         Console.WriteLine("Ingrese el nombre de los productos que desea comprar, cuando desee detenerse ingrese 0: ");
+
                                         Console.WriteLine("Si desea buscar el precio de un producto, escriba -1");
+
                                         productoCompraRapida = Console.ReadLine();
-                                        if(productoCompraRapida == "-1"){
+
+                                        if(productoCompraRapida == "-1")
+                                        {
                                             program.buscarProducto(dictProductos);
                                         }
                                         else
                                         {
-                                            if (dictProductos.ContainsKey(productoCompraRapida)){
+                                            if (dictProductos.ContainsKey(productoCompraRapida))
+                                            {
                                                 totalSumaProd = totalSumaProd + dictProductos[productoCompraRapida];
                                                 Console.WriteLine("Total actual: $" + totalSumaProd + " pesos");
                                             }
                                             else
                                             {
-                                                if(productoCompraRapida != "0"){
+                                                if(productoCompraRapida != "0")
+                                                {
                                                     Console.WriteLine("El producto no se encuentra en la tienda! No se sumo nada!");
                                                 }
                                                     
@@ -177,8 +183,7 @@ namespace programacionparcial2
                                 case 5:
                                     Console.WriteLine("Actualizar cuenta cliente");
                                     Console.WriteLine("\nIngrese el ID para actualizar: ");
-                                    string id2Actualizar = "";
-                                    id2Actualizar = Console.ReadLine();
+                                    
                                     if(dictClientes.ContainsKey(id2Actualizar)){ 
                             
                                     
