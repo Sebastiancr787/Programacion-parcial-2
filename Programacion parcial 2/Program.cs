@@ -145,7 +145,7 @@ namespace programacionparcial2
                                         
                                         pagoDelCliente = float.Parse(Console.ReadLine());
                                         if (pagoDelCliente < totalSumaProd){
-                                            Console.WriteLine("Ese dinero no es suficiente para pagar la suma de productos, intente otra vez: ");
+                                            Console.WriteLine("El dinero no es suficiente para pagar la suma de los productos, intente de nuevo: ");
                                         }
                                         } while(pagoDelCliente < totalSumaProd);
                                         
