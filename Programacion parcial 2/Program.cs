@@ -175,7 +175,7 @@ namespace programacionparcial2
                                             Console.WriteLine("Esta a paz y salvo");
                                         }
                                         if (dictClientes[inputIdCliente] < 0){
-                                            Console.WriteLine("Esta con una deuda de :$" + dictClientes[inputIdCliente] + " pesos");
+                                            Console.WriteLine("Tienes un total de deuda de :$" + dictClientes[inputIdCliente] + " pesos");
                                         }
                                     }
                                     break;
