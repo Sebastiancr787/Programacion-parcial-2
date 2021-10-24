@@ -11,7 +11,7 @@ namespace programacionparcial2
             string productoBuscado = "";
             productoBuscado = Console.ReadLine();
             if (dictProductos.ContainsKey(productoBuscado)){
-            Console.WriteLine("El precio es: " + dictProductos[productoBuscado] + " pesos");                                                                               
+            Console.WriteLine("El precio del producto es: " + dictProductos[productoBuscado] + " pesos");                                                                               
             }
             else
             {
