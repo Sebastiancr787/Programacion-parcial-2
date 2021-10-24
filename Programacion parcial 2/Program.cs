@@ -194,7 +194,7 @@ namespace programacionparcial2
                                         Console.WriteLine("\nIngrese el nuevo valor de la cuenta:  ");
                                         float nuevoValorCuenta = 0;
                                         nuevoValorCuenta = float.Parse(Console.ReadLine());
-                                        dictClientes[id2Actualizar] = nuevoValorCuenta;
+                                        dictClientes[id2Actualizar] = nuevoValorCuenta + dictClientes[id2Actualizar];
 
                                         Console.WriteLine("La cuenta del cliente con id " + id2Actualizar + " ha sido actualizada correctamente!");
                                     
