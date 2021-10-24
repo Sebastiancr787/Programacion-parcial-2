@@ -244,7 +244,7 @@ namespace programacionparcial2
                                     break;
 
                                 default:
-                                    Console.WriteLine("No ha seleccionado ninguna opcion, intentelo de nuevo hola");
+                                    Console.WriteLine("No ha seleccionado ninguna opcion, intentelo de nuevo");
                                     break;
 
                             }
