@@ -11,9 +11,7 @@ namespace programacionparcial2
             string productoBuscado = "";
             productoBuscado = Console.ReadLine();
             if (dictProductos.ContainsKey(productoBuscado)){
-            Console.WriteLine("El precio es: " +
-                            dictProductos[productoBuscado] +
-                            " pesos");                            
+            Console.WriteLine("El precio es: " + dictProductos[productoBuscado] + " pesos");                                                                               
             }
             else
             {
@@ -21,11 +19,8 @@ namespace programacionparcial2
             }
         }
 
-
         static void Main(string[] args)
         {
-
-
 
             Program program = new Program();
             int opcionMenu = 0;
@@ -34,9 +29,6 @@ namespace programacionparcial2
             float totalInformeVentas = 0;
             float totalAdeudadoClientes = 0;
             ArrayList arlistInformeVentas = new ArrayList();
-
-
-
 
             var dictClientes = new Dictionary<string, float>() {
                 {"1000873268", 500},
@@ -74,8 +66,6 @@ namespace programacionparcial2
             };
             Console.WriteLine("Hola, bienvenido a la tienda el lago, elige una opcion\n");
 
-
-
             while (opcionMenu!=9){
 
                 Console.WriteLine(
@@ -90,10 +80,8 @@ namespace programacionparcial2
                                 "\n9.- Salir "
                                 );
 
-
                 Console.WriteLine("Escriba el número de la opción elegida del menú: ");
-
-                
+             
 
                 opcionMenu = Convert.ToInt16(Console.ReadLine());
 
