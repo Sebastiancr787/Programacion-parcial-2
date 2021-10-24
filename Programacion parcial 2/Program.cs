@@ -131,7 +131,7 @@ namespace programacionparcial2
                                     break;
                                 case 3:
                                     Console.WriteLine("Pagar cuenta");
-                                    Console.WriteLine("\n¿El cliente va a fiar? Ingrese 1 si va a fiar, cualquier cosa de lo contrario: ");
+                                    Console.WriteLine("\n¿El cliente va a fiar? Ingrese 1 si va a fiar, Presione cualquier tecla de lo contrario: ");
                                     string vaAFiar = "0";
                                     vaAFiar = Console.ReadLine();
                                     if (vaAFiar == "1"){
