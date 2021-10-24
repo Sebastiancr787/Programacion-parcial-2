@@ -240,7 +240,7 @@ namespace programacionparcial2
 
                                 case 9:
                                     Console.WriteLine("salir");
-                                    Console.Writeline("Gracias por comprar, vuelve pronto :D");
+                                    Console.Writeline("Gracias por su comprar, vuelve pronto :D");
                                     break;
 
                                 default:
