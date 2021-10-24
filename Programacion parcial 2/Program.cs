@@ -237,6 +237,7 @@ namespace programacionparcial2
                                     Console.WriteLine("Acerca de...");
                                     Console.WriteLine("Este proyecto fue desarrollado por estudiantes de la Universidad Pontifica Bolivariana");
                                     Console.WriteLine("Sebastian Castrillón, Victor Salazar, David Yepes");
+                                    Console.WriteLine("000419587, 000413449, 000422695");
                                     
                                     break;
 
