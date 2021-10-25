@@ -84,7 +84,7 @@ namespace programacionparcial2
                 Console.WriteLine("Escriba el número de la opción elegida del menú: ");
              
 
-                opcionMenu = Convert.ToInt16(Console.ReadLine());
+                opcionMenu = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcionMenu)
                             {
