@@ -177,8 +177,22 @@ namespace programacionparcial2
 
                                 case 4:
                                     Console.WriteLine("Consultar cuenta cliente");
+                        
+                                    Console.WriteLine("\n1.- 1000873268 " +
+                                                      "\n2.- 1234567890 " +
+                                                      "\n3.- 0987654321 " +
+                                                      "\n4.- 4620474027 " +
+                                                      "\n5.- 7403801830 " +
+                                                      "\n6.- 9573028404 " +
+                                                      "\n7.- 6473936497 " +
+                                                      "\n8.- 1840572038 " +
+                                                      "\n9.- 0948208293 " +
+                                                      "\n10.- 0002783934 " +
+                                                      "\n11.- 6462828345 " +
+                                                      "\n12.- 1836549163 ");
 
                                     Console.WriteLine("\nIngrese el ID del cliente: ");
+                                                
                                     string inputIdCliente = "0000000000";
                                     inputIdCliente = Console.ReadLine();
                                     if(!dictClientes.ContainsKey(inputIdCliente)){
