@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace programacionparcial2
 {
@@ -89,6 +90,22 @@ namespace programacionparcial2
                             {
                                 case 1:
                                     
+                                    Console.WriteLine("\n1.-gaseosa" +
+                                    "\n2.-papas" +
+                                    "\n3.-agua" +
+                                    "\n4.-frutas" +
+                                    "\n5.-gelatina" +
+                                    "\n6.-chocolate" +
+                                    "\n7.-cafe" +
+                                    "\n8.-fresas" +
+                                    "\n9.-carne" +
+                                    "\n10.-pollo" +
+                                    "\n11.-cerveza" +
+                                    "\n12.-mentas" +
+                                    "\n13.-arepas" +
+                                    "\n14.-queso" +
+                                    "\n15.-pan" +
+                                    "\n16.-panzerotti");
                                     program.buscarProducto(dictProductos);
 
                                     break;
